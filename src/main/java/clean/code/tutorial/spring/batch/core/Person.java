@@ -11,6 +11,7 @@ public class Person {
 	private String nom;
 	private String prenom;
 	private String civilite;
+	private String Taille;
 
 	public String getNom() {
 		return nom;
@@ -43,9 +44,16 @@ public class Person {
 	public void setId(final int id) {
 		this.id = id;
 	}
+	public String getTaille() {
+		return Taille;
+	}
+
+	public void setTaille(String taille) {
+		Taille = taille;
+	}
 
 	@Override
 	public String toString() {
-		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", civilite=" + civilite + "]";
+		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", civilite=" + civilite + ", taille=" + Taille + "]";
 	}
 }

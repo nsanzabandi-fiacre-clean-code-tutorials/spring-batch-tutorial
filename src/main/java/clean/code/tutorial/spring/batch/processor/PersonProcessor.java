@@ -23,13 +23,14 @@ public class PersonProcessor implements ItemProcessor<Person, Person> {
 		Person personneOutput = null;
 
 		// si la civilite a la valeur M la personne sera ecrite en base sinon on la rejette
-		if ("M".equals(personneInput.getCivilite()) && personneInput.getNom().startsWith("D")) {
+		//if ("M".equals(personneInput.getCivilite()) && personneInput.getNom().startsWith("D")) {
 			personneOutput = new Person();
 			personneOutput.setCivilite(personneInput.getCivilite());
 			personneOutput.setId(personneInput.getId());
 			personneOutput.setNom(personneInput.getNom());
 			personneOutput.setPrenom(personneInput.getPrenom());
-		}
+			personneOutput.setTaille(personneInput.getTaille());
+		//}
 		return personneOutput;
 	}
 }
