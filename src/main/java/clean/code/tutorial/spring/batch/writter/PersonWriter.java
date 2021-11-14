@@ -28,6 +28,7 @@ public class PersonWriter implements ItemWriter<Person> {
 	public void write(final List<? extends Person> persons) throws Exception {
 		for (Person person : persons) {
 			logger.info("Person: {}", person.toString());
+			// We could also chose to write in DB here
 		}
 	}
 }
